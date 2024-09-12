@@ -1,0 +1,18 @@
+/* GRANTS */
+
+#grants .first-paragraph {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  #grants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .grant {
+    width: calc((var(--page-width) / 2) - 2.5rem);
+  }
+}

@@ -1,0 +1,41 @@
+/* CONTACT */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form form .layout-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form input {
+  padding: 1rem;
+}
+
+.contact-form textarea {
+  padding: 1rem;
+  height: 10rem;
+}
+
+.contact-form .cta-button {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  #contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-method {
+    width: calc((var(--page-width) / 2) - 2.5rem);
+  }
+
+  .contact-form {
+    width: var(--page-width);
+    padding: 2rem !important;
+  }
+}

@@ -1,0 +1,254 @@
+:root {
+  --page-font-size: 14px;
+  --page-width: 100%;
+  --page-margin: 21px;
+  --bg-color-white-light: #fffbea;
+  --bg-color-white-dark: #e6e2cf;
+  --color-green-light: #019a7d;
+  --color-green-dark: #004a3c;
+  --color-blue-light: #c1dbd7;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  /* outline: 1px solid #ff000050; */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--page-font-size);
+}
+
+body {
+  background-color: var(--bg-color-white-light);
+}
+
+.page {
+  width: var(--page-width);
+  margin: auto;
+  background-color: var(--bg-color-white-light);
+}
+
+a {
+  color: var(--color-green-light);
+}
+
+a.cta-button,
+button.cta-button {
+  color: var(--bg-color-white-light);
+  background-color: var(--color-green-dark);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  height: fit-content;
+  width: fit-content;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.cta-button-mobile {
+  color: var(--bg-color-white-light);
+  background-color: var(--color-green-dark);
+  padding: 1rem 1rem;
+  border-radius: 10rem;
+  height: fit-content;
+  width: fit-content;
+}
+
+a.cta-button-mobile > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+button.non-cta-button,
+a.non-cta-button {
+  color: var(--color-green-dark);
+  background-color: transparent;
+  padding: 1rem 2rem;
+  border: 2px solid var(--color-green-dark);
+  border-radius: 0.5rem;
+  height: fit-content;
+  width: fit-content;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+img.icon {
+  width: 50px;
+  height: 50px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem var(--page-margin);
+  margin-bottom: 5rem;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+#process,
+#benefits,
+#eligibility,
+#grants,
+#logos,
+#contact {
+  background-color: var(--bg-color-white-light);
+}
+
+#hero,
+#retrofit-banner,
+#referral-banner,
+#expertise-banner {
+  background-color: var(--bg-color-white-dark);
+}
+
+section h2 {
+  font-size: 3rem;
+  color: var(--color-green-dark);
+  letter-spacing: -1px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+section .card-with-subheading {
+  padding: var(--page-margin);
+  background-color: var(--bg-color-white-dark);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+section .card-with-subheading h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+section .card-with-subheading h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-green-dark);
+}
+
+section .card-with-heading-only {
+  padding: var(--page-margin);
+  background-color: var(--bg-color-white-dark);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+section .card-with-heading-only h3,
+section .card-with-heading-only h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-green-dark);
+}
+
+/* ------------------------ */
+
+@media (min-width: 600px) {
+  :root {
+    --page-width: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --page-width: 1200px;
+  }
+
+  body {
+    background-color: var(--bg-color-white-light);
+    overflow-x: hidden;
+  }
+
+  section {
+    width: 1200px;
+    margin: auto;
+  }
+
+  .banner {
+    max-width: 1200px;
+  }
+
+  header,
+  #hero,
+  .banner,
+  #banner,
+  footer {
+    width: 100%;
+    position: relative;
+  }
+
+  header::before,
+  #hero::before,
+  .banner::before,
+  #banner::before,
+  footer::before,
+  header::after,
+  #hero::after,
+  .banner::after,
+  #banner::after,
+  footer::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+
+  header::before,
+  #hero::before,
+  .banner::before,
+  #banner::before,
+  footer::before {
+    left: -100%;
+  }
+
+  header::after,
+  #hero::after,
+  .banner::after,
+  #banner::after,
+  footer::after {
+    right: -100%;
+  }
+
+  header::before,
+  #hero::before,
+  .banner::before,
+  header::after,
+  #hero::after,
+  .banner::after {
+    background-color: var(--bg-color-white-dark);
+  }
+
+  #banner::before,
+  #banner::after {
+    background-color: var(--color-blue-light);
+  }
+
+  footer::before,
+  footer::after {
+    background-color: var(--color-green-dark);
+  }
+
+  #logos::before,
+  #logos::after {
+    background-color: var(--bg-color-white-light) !important;
+  }
+}

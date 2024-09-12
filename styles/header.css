@@ -1,0 +1,122 @@
+header {
+  padding: var(--page-margin);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color-white-dark);
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 1rem #00000050;
+  z-index: 1000;
+}
+
+header .logo {
+  position: relative;
+}
+
+header .logo img {
+  width: 4rem;
+  height: 4rem;
+}
+
+header .logo .logo-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 7rem;
+  top: 1.35rem;
+  right: -7.5rem;
+}
+
+header .logo-text-line-1 {
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  width: fit-content;
+}
+
+header .logo-text-line-2 {
+  color: var(--color-green-dark);
+  letter-spacing: -0.5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  /* position: relative; */
+}
+
+nav .menu-drop-down {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--bg-color-white-dark);
+  box-shadow: 0 0 1rem var(--color-green-dark);
+  list-style-type: none;
+  gap: 1rem;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  min-width: fit-content;
+  width: calc(100% - 2rem);
+  max-width: 100rem;
+}
+
+.nav-links.show {
+  display: flex;
+  opacity: 1;
+}
+
+@media (min-width: 1200px) {
+  header {
+    max-width: 1200px;
+    margin: auto;
+  }
+  header nav {
+    align-items: center;
+  }
+  .nav-links {
+    display: flex;
+    opacity: 1;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: var(--bg-color-white-dark);
+    box-shadow: none;
+    list-style-type: none;
+    gap: 2rem;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    padding: 0;
+    border-radius: 0.5rem;
+    min-width: fit-content;
+    width: calc(100% - 2rem);
+    max-width: 100rem;
+  }
+  .nav-link {
+    color: var(--color-green-dark);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .menu-drop-down {
+    display: none;
+  }
+  .cta-button-mobile {
+    display: none;
+  }
+}

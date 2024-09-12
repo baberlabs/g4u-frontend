@@ -1,0 +1,41 @@
+/* ELIGIBILITY */
+
+#eligibility .layout-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+}
+
+#eligibility h3 {
+  font-size: 2rem;
+  color: var(--color-green-dark);
+}
+
+.eligibility-category {
+  padding: var(--page-margin);
+  background-color: var(--bg-color-white-dark);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.eligibility-detail {
+  background-color: var(--bg-color-white-light) !important;
+}
+
+.eligibility-detail ul {
+  padding-left: 1rem;
+}
+
+@media (min-width: 1200px) {
+  #eligibility .layout-container {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .eligibility-category {
+    width: calc((var(--page-width) / 2) - 2.5rem);
+  }
+}

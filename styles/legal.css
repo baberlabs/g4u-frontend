@@ -1,0 +1,8 @@
+#privacy-policy ul,
+#terms-of-service ul,
+#accessibility ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}

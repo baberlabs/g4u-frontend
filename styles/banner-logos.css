@@ -1,0 +1,23 @@
+/* LOGOS */
+
+#logos {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+#logos .img-container {
+  width: 10.5rem;
+  height: 5rem;
+  background-color: var(--bg-color-white-light);
+  /* border-radius: 0.5rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#logos img {
+  width: 60%;
+}

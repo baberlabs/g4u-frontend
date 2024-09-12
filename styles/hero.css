@@ -1,0 +1,69 @@
+/* HERO */
+
+#hero {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero .hero-image img {
+    width: 100%;
+}
+
+#hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#hero h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+    color: var(--color-green-dark);
+}
+
+#hero .hero-text-first-paragraph {
+    font-size: 1.4rem;
+}
+
+.hero-grouping {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: end;
+}
+
+#hero .cta-button {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+#hero .image-gas-safe-logo {
+    width: 4rem;
+}
+
+@media (min-width: 1200px) {
+    #hero {
+        max-width: 1200px;
+        margin: auto;
+        flex-direction: row-reverse;
+    }
+
+    .hero-grouping {
+        align-items: start;
+        text-align: left;
+    }
+
+    .image-gas-safe-logo {
+        position: absolute;
+        right: 1.5rem;
+        bottom: 5rem;
+        width: 6rem !important;
+    }
+
+    #hero .cta-button {
+        width: fit-content;
+    }
+}
